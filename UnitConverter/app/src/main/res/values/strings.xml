@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unit Converter</string>
+
+    <string name="tmpC_hint">Celsius</string>
+    <string name="tmpF_hint">Fahrenheit</string>
+    <string name="dstKM_hint">Kilometers</string>
+    <string name="dstM_hint">Miles</string>
+    <string name="wgtKG_hint">Kilograms</string>
+    <string name="wgtLB_hint">Pounds</string>
+    <string name="volL_hint">Liters</string>
+    <string name="volG_hint">Gallons</string>
+
+    <string name="tmpC_View">°C</string>
+    <string name="tmpF_View">°F</string>
+    <string name="dstKM_View">KM</string>
+    <string name="dstM_View">Mi</string>
+    <string name="wgtKG_View">KG</string>
+    <string name="wgtLB_View">LB</string>
+    <string name="volL_View">L</string>
+    <string name="volG_View">Gal</string>
+</resources>
