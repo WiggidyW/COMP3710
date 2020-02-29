@@ -1,0 +1,62 @@
+@startuml
+
+:System: as System
+:User: as User
+
+(Note Field)
+
+(Title Field)
+
+(Title)
+
+(Note)
+
+(Note List)
+
+User -down-> (Note Field)
+note on link
+inputs, reads
+end note
+
+User -down-> (Title Field)
+note on link
+inputs, reads
+end note
+
+System -up-> (Note Field)
+note on link
+inputs, reads
+end note
+
+System -up-> (Title Field)
+note on link
+inputs, reads
+end note
+
+(Note Field) .right.> (Note)
+
+(Title Field) .right.> (Title)
+
+(Note List) .left.> (Title)
+
+System -up-> (Title)
+note on link
+accesses from DB
+end note
+
+System -up-> (Note)
+note on link
+accesses from DB
+end note
+
+System -up-> (Note List)
+note on link
+adds to, reads title from
+end note
+
+User -down-> (Note List)
+note on link
+clicks
+end note
+
+@enduml
