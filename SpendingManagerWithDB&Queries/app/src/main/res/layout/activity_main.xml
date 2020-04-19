@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <EditText
+        android:id="@+id/inputDate"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Date"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/inputAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <EditText
+        android:id="@+id/inputAmount"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Amount"
+        android:inputType="none"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/inputPurpose"
+        app:layout_constraintStart_toEndOf="@+id/inputDate"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <EditText
+        android:id="@+id/inputPurpose"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Purpose"
+        android:inputType="none"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/inputAdd"
+        app:layout_constraintStart_toEndOf="@+id/inputAmount"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Button
+        android:id="@+id/inputAdd"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/inputSpend"
+        app:layout_constraintStart_toEndOf="@+id/inputPurpose"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Button
+        android:id="@+id/inputSpend"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputAdd"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <EditText
+        android:id="@+id/filterDateFrom"
+        android:layout_width="90dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Date From"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/filterDateTo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <EditText
+        android:id="@+id/filterDateTo"
+        android:layout_width="90dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Date To"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/filterAmountFrom"
+        app:layout_constraintStart_toEndOf="@+id/filterDateFrom"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <EditText
+        android:id="@+id/filterAmountFrom"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Amount From"
+        android:inputType="none"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/filterAmountTo"
+        app:layout_constraintStart_toEndOf="@+id/filterDateTo"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <EditText
+        android:id="@+id/filterAmountTo"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Amount To"
+        android:inputType="none"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/filterSpendType"
+        app:layout_constraintStart_toEndOf="@+id/filterAmountFrom"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <EditText
+        android:id="@+id/filterSpendType"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Type"
+        android:inputType="none"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/filterAmountTo"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <TextView
+        android:id="@+id/transactionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transactions"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transactionsTitle" >
+
+        <TableLayout
+            android:id="@+id/transactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
